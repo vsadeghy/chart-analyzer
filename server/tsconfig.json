@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": false,
+    "forceConsistentCasingInFileNames": true,
+    "checkJs": true,
+    /* Bundled projects */
+    "lib": [
+      "ES2023"
+    ],
+    "types": [
+      "node"
+    ],
+    "noEmit": true,
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "incremental": true,
+    /* Build */
+    "declaration": true,
+    "outDir": "./dist",
+    /* Path Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+      "$/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    ".eslintrc.cjs",
+    "**/*.ts",
+    "**/*.cjs",
+    "**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    ".dist/**/*"
+  ],
+  "tsc-alias": {
+    "resolveJsonModule": true,
+    "verbose": false
+  }
+}
